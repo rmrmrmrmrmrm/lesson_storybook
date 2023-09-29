@@ -14,7 +14,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
+    "@reduxjs/toolkit": "^1.9.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2"
@@ -29,6 +29,7 @@
     "test-storybook": "test-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.4.5",
     "@storybook/addon-essentials": "^7.0.6",
     "@storybook/addon-interactions": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",

@@ -3,9 +3,8 @@ import Task from "./Task";
 export default {
   component: Task,
   title: "Task",
+  tags: ["autodocs"],
 };
-
-// const Template = (args) => <Task {...args} />;
 
 export const Default = {
   args: {
@@ -13,7 +12,6 @@ export const Default = {
       id: "1",
       title: "Test Task",
       state: "TASK_INBOX",
-      updatedAt: new Date(2021, 0, 1, 9, 0),
     },
   },
 };
