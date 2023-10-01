@@ -1,24 +1,24 @@
-# Workflow name
+# ワークフロー名
 name: "Chromatic Deployment"
 
-# Event for the workflow
+# ワークフローのイベント
 on: push
 
-# List of jobs
+# ジョブのリスト
 jobs:
   test:
-    # Operating System
+    ＃ オペレーティング·システム
     runs-on: ubuntu-latest
-    # Job steps
+    # ジョブステップ
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - run: yarn
-        #👇 Adds Chromatic as a step in the workflow
+        #👇 クロマチックをワークフローのステップとして追加します
       - uses: chromaui/action@v1
-        # Options required for Chromatic's GitHub Action
+        # Chromatic の GitHub Action に必要なオプション
         with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
+          #👇 Chromatic projectToken、取得するには https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ を参照してください
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
